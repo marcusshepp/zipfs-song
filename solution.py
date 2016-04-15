@@ -63,11 +63,12 @@ def algo(tracks, albumsize, selectsize):
                 new_tracks, 
                 key=lambda track: track.quality, 
                 reverse=True)[:selectsize]
+    assert len(new_tracks) == selectsize
     return [track.name for track in new_tracks]
 
 def main(DEBUG):
     if DEBUG:
-        return test_algo()
+        test_algo()
     else:
         albumsize, selectsize = albumsize_selectsize()
         tracks = to_namedtuple([plays_name(sys.stdin) for _ in xrange(albumsize)])
@@ -76,4 +77,4 @@ def main(DEBUG):
 
 if __name__ == '__main__':
     if sys.stdin.isatty():
-        main(DEBUG=False)
+        main(DEBUG=True)
