@@ -23,10 +23,10 @@ def test_algo():
             assert algo(tracks, original_track_tuples, a_s, s_s) == desired_result
     test_w_file(
         file_path="test_input/input1.txt", 
-        desired_result=["four", "two"])
+        desired_result="four\ntwo")
     test_w_file(
         file_path="test_input/input2.txt", 
-        desired_result=["19_2000", "clint_eastwood", "tomorrow_comes_today"])
+        desired_result="19_2000\nclint_eastwood\ntomorrow_comes_today")
     
 def albumsize_selectsize():
     albumsize, selectsize = map(int, sys.stdin.readline().split(" "))
@@ -97,8 +97,8 @@ def main(DEBUG):
         tracks = to_namedtuple(original_track_tuples)
         results = algo(tracks, original_track_tuples, albumsize, selectsize)
         for name in results:
-            sys.stdout.writelines(name)
+            sys.stdout.write(name)
 
 if __name__ == '__main__':
     if sys.stdin.isatty():
-        main(DEBUG=False)
+        main(DEBUG=1)
