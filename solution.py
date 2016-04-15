@@ -1,14 +1,4 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-"""
-A programming challenge proposed by Savant Group.
-(http://www.savantgroup.com/)
-
-Problem Name: Zipf's Song
-Original Problem Source: https://labs.spotify.com/puzzles/
-
-THIS SOLUTION IS INVALID
-"""
+""" THIS SOLUTION IS INVALID """
 __author__ = "Marcus J. Shepherd"
 __email__ = "marcusshepdotcom@gmail.com"
 __date__ = "April 15, 2016"
