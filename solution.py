@@ -18,7 +18,7 @@ def test_algo():
             a_s, s_s = map(int, f.readline().split(" "))
             album = list()
             for _ in xrange(a_s):
-                plays, name = plays_name_from_file(f)
+                plays, name = plays_name(f)
                 album.append((int(plays), strip_newline(name)))
             assert algo(to_namedtuple(album), a_s, s_s) == desired_result
     test_w_file(
@@ -32,13 +32,9 @@ def albumsize_selectsize():
     albumsize, selectsize = map(int, sys.stdin.readline().split(" "))
     return albumsize, selectsize
 
-def plays_name():
-    plays, name = sys.stdin.readline().split(" ")
+def plays_name(input_):
+    plays, name = input_.readline().split(" ")
     return int(plays), name
-    
-def plays_name_from_file(f):
-    plays, name = f.readline().split(" ")
-    return strip_newline(plays), strip_newline(name)
 
 def strip_newline(s):
     return s.replace("\n", "")
@@ -74,9 +70,9 @@ def main(DEBUG):
         return test_algo()
     else:
         albumsize, selectsize = albumsize_selectsize()
-        tracks = to_namedtuple([plays_name() for _ in xrange(albumsize)])
+        tracks = to_namedtuple([plays_name(sys.stdin) for _ in xrange(albumsize)])
         for i in algo(tracks, albumsize, selectsize):
-            print i
+            sys.stdout.write(i)
 
 if __name__ == '__main__':
     if sys.stdin.isatty():
