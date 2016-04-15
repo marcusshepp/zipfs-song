@@ -1,6 +1,13 @@
 """
 Let's try this again.
+ACCEPTED!!!!!!!!!!!
+AYYYYYY
+
+THIS SOLUTION WAS ACCEPTED
 """
+__author__ = "Marcus J. Shepherd"
+__email__ = "marcusshepdotcom@gmail.com"
+__date__ = "April 15, 2016"
 import sys
 
 def main():

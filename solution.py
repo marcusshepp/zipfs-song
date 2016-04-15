@@ -6,6 +6,8 @@ A programming challenge proposed by Savant Group.
 
 Problem Name: Zipf's Song
 Original Problem Source: https://labs.spotify.com/puzzles/
+
+THIS SOLUTION IS INVALID
 """
 __author__ = "Marcus J. Shepherd"
 __email__ = "marcusshepdotcom@gmail.com"
